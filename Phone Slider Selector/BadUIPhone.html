@@ -7,6 +7,7 @@
         <h3>Bad Phone Selector</h3>
         <div>Phone: <span id="phoneDisplay">(30) 339-669-214 </span></div>
         <input id="slider" type="range" min="00000000001" max="99999999999" value="30339669214" title="Hint: use keyboard arrows to change value" style="transition: width 0.5s ease-in-out;">
+        <span id="angleSpan"></span>
         <hr>
         <div>
             <input id="advancedMode" type="checkbox">
@@ -31,6 +32,7 @@
     // var valueDisplay = document.getElementById("valueDisplay");
     var phoneDisplay = document.getElementById("phoneDisplay");
     var advancedModeCheckbox = document.getElementById("advancedMode");
+    var angleSpan = document.getElementById("angleSpan");
     var angle = 0;
     var speed = 0;
     var friction = 0.99;
@@ -128,6 +130,7 @@
             angle = Math.max(-10, Math.min(10, x));
             slider.style.transform = 'rotate(' + angle + 'deg)';
             angleSlider.value = angle;
+            angleSpan.html = angle;
         }
     });
 

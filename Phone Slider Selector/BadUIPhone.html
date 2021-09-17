@@ -128,9 +128,9 @@
 
             var x = g/Math.max(0.25,b);
             angle = Math.max(-10, Math.min(10, x));
+            angleSpan.html = angle;
             slider.style.transform = 'rotate(' + angle + 'deg)';
             angleSlider.value = angle;
-            angleSpan.html = angle;
         }
     });
 

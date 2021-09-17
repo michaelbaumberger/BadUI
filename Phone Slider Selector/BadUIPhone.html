@@ -124,8 +124,7 @@
         if(Math.abs(event.beta)>90) g = -g;
 
         var x = g/Math.max(0.25,b);
-        smoothx = smoothx*0.7+x*0.3;
-        angleslider.value = Math.max(-10, Math.min(10, smoothx * 10 + 10));
+        smoothx = x;
     });
 
     // On submit

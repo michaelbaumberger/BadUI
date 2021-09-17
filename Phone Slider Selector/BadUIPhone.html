@@ -125,9 +125,8 @@
             if(Math.abs(event.beta)>90) g = -g;
 
             var x = g/Math.max(0.25,b);
-            var result = Math.max(-10, Math.min(10, smoothx*10-10));
-            angle = Number(result);
-            slider.style.transform = 'rotate(' + angle + 'deg)';
+            //var result = Math.max(-10, Math.min(10, smoothx*10-10));
+            angleSlider.value = x;
         }
     });
 

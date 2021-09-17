@@ -126,7 +126,7 @@
 
             var x = g/Math.max(0.25,b);
             //var result = Math.max(-10, Math.min(10, smoothx*10-10));
-            angleSlider.value = x;
+            angleSlider.value = Math.max(-10, Math.min(10, x));
         }
     });
 
